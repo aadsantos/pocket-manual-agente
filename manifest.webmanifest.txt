@@ -1,0 +1,22 @@
+{
+  "name": "Pocket Manual - Agente de Trânsito",
+  "short_name": "Agente Trânsito",
+  "description": "Manual de bolso para consulta rápida do agente de trânsito.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#074fa3",
+  "theme_color": "#074fa3",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
