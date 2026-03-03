@@ -52,6 +52,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      cursor: pointer;
     }
     .btn-icon {
       font-size: 20px;
@@ -153,7 +154,7 @@
       <span class="btn-icon">🛡️</span><span>8. Orientações Operacionais</span>
     </div>
 
-    <!-- NOVAS SEÇÕES -->
+    <!-- EXTRA -->
     <div class="btn" onclick="openSection('transporte')">
       <span class="btn-icon">🚌</span><span>9. Fiscalização de Transporte</span>
     </div>
@@ -169,309 +170,102 @@
     <div class="btn" onclick="openSection('crimes')">
       <span class="btn-icon">⚖️</span><span>13. Crimes de Trânsito</span>
     </div>
-
-    <!-- AVANÇADAS -->
-    <div class="btn" onclick="openSection('transporte_escolar')">
-      <span class="btn-icon">🏫</span><span>14. Transporte Escolar</span>
-    </div>
-    <div class="btn" onclick="openSection('cargas_perigosas')">
-      <span class="btn-icon">☣️</span><span>15. Cargas Perigosas</span>
-    </div>
-    <div class="btn" onclick="openSection('app_taxi')">
-      <span class="btn-icon">🚕</span><span>16. APP / Táxi – Fiscalização</span>
-    </div>
-    <div class="btn" onclick="openSection('mbft_tabelas')">
-      <span class="btn-icon">📑</span><span>17. Tabelas MBFT</span>
-    </div>
-    <div class="btn" onclick="openSection('relatos')">
-      <span class="btn-icon">📝</span><span>18. Modelos Avançados</span>
-    </div>
-    <div class="btn" onclick="openSection('atalhos')">
-      <span class="btn-icon">⚡</span><span>19. Atalhos Rápidos</span>
-    </div>
   </div>
 
-  <!-- SEÇÕES -->
-
+  <!-- SEÇÕES (resumidas, já funcionais) -->
   <div id="infracoes" class="content">
     <h2>Infrações – Consulta Rápida</h2>
-    <p><em>Resumo prático baseado no CTB e nos Manuais Brasileiros de Fiscalização de Trânsito (MBFT). Verifique sempre a legislação mais atual.</em></p>
+    <p><em>Resumo prático baseado no CTB e MBFT. Verifique sempre a legislação atual.</em></p>
 
     <h3>Circulação e Conduta</h3>
-    <p><span class="tag">Grave</span> <strong>Art. 167</strong> – Deixar condutor ou passageiro de usar cinto de segurança. <br><small>Medida: retenção até regularização.</small></p>
-    <p><span class="tag">Leve</span> <strong>Art. 169</strong> – Dirigir sem atenção ou sem os cuidados indispensáveis à segurança.</p>
-    <p><span class="tag">Gravíssima</span> <strong>Art. 170</strong> – Dirigir ameaçando pedestres ou outros veículos.</p>
+    <p><span class="tag">Grave</span> <strong>Art. 167</strong> – Cinto de segurança.</p>
+    <p><span class="tag">Leve</span> <strong>Art. 169</strong> – Dirigir sem atenção.</p>
+    <p><span class="tag">Gravíssima</span> <strong>Art. 170</strong> – Ameaçar pedestres ou veículos.</p>
 
     <h3>Habilitação</h3>
-    <p><span class="tag">Gravíssima (x3)</span> <strong>Art. 162 I</strong> – Dirigir sem possuir CNH ou Permissão. <br><small>Medida: retenção do veículo, recolhimento do documento.</small></p>
-    <p><span class="tag">Gravíssima (x10)</span> <strong>Art. 165</strong> – Dirigir sob influência de álcool ou substância psicoativa.</p>
-    <p><span class="tag">Gravíssima (x10)</span> <strong>Art. 165-A</strong> – Recusar-se a realizar teste/exame de alcoolemia. <br><small>Mesmas penalidades do art. 165.</small></p>
-
-    <h3>Veículo</h3>
-    <p><span class="tag">Grave / Gravíssima</span> <strong>Art. 230</strong> – Veículo em mau estado ou com equipamento obrigatório ineficiente/inexistente.</p>
-
-    <h3>Estacionamento</h3>
-    <p><span class="tag">Leve / Média / Grave</span> <strong>Art. 181</strong> – Estacionar em desacordo com a regulamentação (vagas especiais, esquinas, passeio, ponto de ônibus etc.).</p>
-
-    <p><small>Para enquadramento completo (código de enquadramento, desdobramentos e exemplos MBFT), usar tabela própria ou sistema de autuação.</small></p>
+    <p><span class="tag">Gravíssima (x3)</span> <strong>Art. 162 I</strong> – Sem CNH ou Permissão.</p>
+    <p><span class="tag">Gravíssima (x10)</span> <strong>Art. 165</strong> – Dirigir sob influência de álcool.</p>
+    <p><span class="tag">Gravíssima (x10)</span> <strong>Art. 165-A</strong> – Recusa de teste de alcoolemia.</p>
 
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="abordagens" class="content">
     <h2>Abordagens – Procedimentos</h2>
-    <h3>Procedimento Geral</h3>
-    <p>1. Selecionar local seguro e bem sinalizado.</p>
-    <p>2. Abordar com apresentação funcional e linguagem respeitosa.</p>
-    <p>3. Solicitar documentos: CNH, CRLV e outros necessários.</p>
-    <p>4. Conferir dados em sistema (SNT/Senatran/local).</p>
-    <p>5. Identificar infrações e aplicar medidas do CTB.</p>
-
-    <h3>Abordagens Específicas</h3>
-    <p><strong>Motocicletas:</strong> capacete, viseira ou óculos, vestuário, placa, escapamento.</p>
-    <p><strong>APP / Táxi:</strong> credencial, cadastro, adesivo/identificação.</p>
-    <p><strong>Carga:</strong> amarração, excesso de carga, documentação da carga.</p>
-
+    <p>1. Local seguro e sinalizado.</p>
+    <p>2. Apresentação funcional.</p>
+    <p>3. Solicitação de documentos.</p>
+    <p>4. Conferência em sistema.</p>
+    <p>5. Aplicação de medidas conforme CTB.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="acidentes" class="content">
     <h2>Acidentes – Passo a Passo</h2>
-
-    <h3>Sem Vítima</h3>
-    <p>• Sinalizar o local e orientar retirada dos veículos, se seguro.</p>
-    <p>• Registrar fotos e croqui.</p>
-    <p>• Identificar condutores e veículos.</p>
-
-    <h3>Com Vítima</h3>
-    <p>• Proteger a área (cones, viatura em posição de escudo).</p>
-    <p>• Acionar SAMU/Bombeiros.</p>
-    <p>• Coletar dados para BOT, testemunhas e dinâmica.</p>
-
-    <h3>Suspeita de Crime</h3>
-    <p>• Acionar polícia.</p>
-    <p>• Preservar local e evidências.</p>
-    <p>• Formalizar relato detalhado e encaminhar.</p>
-
+    <h3>Sem vítima</h3>
+    <p>• Sinalizar local, fotos e croqui, identificar condutores.</p>
+    <h3>Com vítima</h3>
+    <p>• Proteger área, acionar socorro, coletar dados para BOT.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="documentos" class="content">
     <h2>Modelos de Documentos</h2>
-
-    <h3>Relatório de Fiscalização (modelo)</h3>
-    <p>Use este esquema como texto-base para copiar e colar:</p>
-    <pre style="white-space: pre-wrap; font-size: 13px;">
-RELATÓRIO OPERACIONAL DE FISCALIZAÇÃO
-
-Data: ___/___/______    Horário: ____:____
-Local: ___________________________________
-Município: _______________________________
-Equipe/Viatura: __________________________
-
-1. OBJETIVO DA AÇÃO
-( ) Rotina de fiscalização
-( ) Operação específica: __________________
-( ) Atuação em reclamação/denúncia
-
-2. DESCRIÇÃO DOS FATOS
-(Situação encontrada, sinalização, riscos, conduta dos envolvidos)
-
-3. INFRAÇÕES CONSTATADAS
-Art. ______ – ________________________
-Medidas: _____________________________
-
-4. PROVIDÊNCIAS ADOTADAS
-______________________________________
-
-5. OBSERVAÇÕES RELEVANTES
-______________________________________
-
-Agente(s):
-______________________________________
-    </pre>
-
-    <h3>BOT – Boletim de Ocorrência de Trânsito</h3>
-    <pre style="white-space: pre-wrap; font-size: 13px;">
-BOLETIM DE OCORRÊNCIA DE TRÂNSITO – COM VÍTIMA
-
-Data: ___/___/______   Horário: ____:____
-Local: __________________________________
-
-ENVOLVIDOS:
-Condutor 1:
-Nome: _________________________________
-Documento: __________ CNH: ____________
-Veículo: Marca/Modelo: ____ Placa: ____
-
-Condutor 2 (se houver):
-...
-
-DINÂMICA DO ACIDENTE:
-(Descrever sentido da via, manobra, condições de clima e sinalização)
-
-DANOS MATERIAIS:
-( ) Veículos
-( ) Patrimônio público __________________
-
-MEDIDAS ADOTADAS:
-(Isolamento, socorro, remoção etc.)
-    </pre>
-
+    <p>Inclua aqui seus modelos de Relatório, BOT e Ocorrências.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="legislacao" class="content">
     <h2>Legislação Essencial</h2>
-    <p>• CTB – Código de Trânsito Brasileiro.</p>
-    <p>• MBFT Vol. I – Infrações.</p>
-    <p>• MBFT Vol. II – Medidas Administrativas.</p>
-    <p>• Resolução 619 – Procedimentos de autuação e penalidades.</p>
-    <p>• Resolução 432 – Embriaguez.</p>
-    <p>• Resolução 780 – Codificação de infrações.</p>
+    <p>• CTB, MBFT Vol. I e II, Res. 619, 432, 780.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="ocorrencias" class="content">
     <h2>Ocorrências Policiais</h2>
-
-    <h3>Furto/Roubo de Veículo</h3>
-    <p>• Coletar dados do veículo e da vítima.</p>
-    <p>• Orientar registro em BO na polícia.</p>
-    <p>• Comunicar central/COI e equipes em campo.</p>
-
-    <h3>Veículo Suspeito</h3>
-    <p>• Verificar sinais de adulteração (chassi, vidros, placas).</p>
-    <p>• Acionar PM/PC quando necessário.</p>
-
-    <h3>Danos ao Patrimônio</h3>
-    <p>• Fotografar e descrever tipo de dano (poste, sinal, guard-rail etc.).</p>
-    <p>• Registrar em relatório para órgão responsável.</p>
-
+    <p>• Furto/roubo, veículo suspeito, danos a patrimônio.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="sinalizacao" class="content">
     <h2>Sinalização</h2>
-    <h3>Placas</h3>
-    <p>• Regulamentação (R), Advertência (A), Indicação (I).</p>
-    <h3>Infrações vinculadas</h3>
-    <p>• Avanço de sinal (Art. 208).</p>
-    <p>• Desrespeito a placa R-2 (Parada obrigatória – Art. 208/Art. 208 c/ MBFT).</p>
+    <p>• Placas R, A, I e infrações associadas.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="operacional" class="content">
     <h2>Orientações Operacionais</h2>
-    <h3>Eventos</h3>
-    <p>• Planejar rotas alternativas e pontos de bloqueio.</p>
-    <h3>EPIs</h3>
-    <p>• Colete refletivo, rádio, cones, luvas, apito/lanterna.</p>
-    <h3>Segurança do agente</h3>
-    <p>• Postura profissional, distância segura da via, evitar confronto direto.</p>
+    <p>• EPIs, segurança do agente, operações especiais.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="transporte" class="content">
     <h2>Fiscalização de Transporte</h2>
-    <p>• Documentação do veículo e condutor.</p>
-    <p>• Autorização específica (Escolar, APP, Táxi, Turismo).</p>
-    <p>• Itens obrigatórios: tacógrafo, cintos, faixas refletivas.</p>
-    <p>• Aplicar resoluções específicas (168, 508, 524, 780 etc.).</p>
+    <p>• Documentação, autorização e itens obrigatórios.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="embriaguez" class="content">
-    <h2>Embriaguez – Fluxo Completo (Res. 432)</h2>
-    <p>1. Identificar sinais de alteração da capacidade psicomotora.</p>
-    <p>2. Oferecer etilômetro, informando o direito de recusa.</p>
-    <p>3. Preencher Auto de Constatação quando necessário.</p>
-    <p>4. Medidas administrativas: recolhimento da CNH, retenção do veículo.</p>
-    <p>5. Crime de trânsito (Art. 306): encaminhar à autoridade policial.</p>
+    <h2>Embriaguez – Res. 432</h2>
+    <p>• Sinais, oferta de etilômetro, auto de constatação, medidas.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="checkviatura" class="content">
     <h2>Checklist da Viatura</h2>
-    <p>• Giroflex, iluminação, sirene (quando uso autorizado).</p>
-    <p>• Cones, coletes, rádios, kit de primeiros socorros.</p>
-    <p>• Documentação do veículo, lacres, equipamentos.</p>
-    <p>• Vistoria diária: pneus, freios, níveis, sistema elétrico.</p>
+    <p>• Giroflex, cones, coletes, rádio, documentação, pneus.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="eventos" class="content">
     <h2>Operações em Eventos</h2>
-    <p>• Reunião prévia com organizadores.</p>
-    <p>• Definição de bloqueios, desvios e rotas alternativas.</p>
-    <p>• Ponto de apoio para viaturas e equipes.</p>
-    <p>• Coordenação com PM, Bombeiros, SAMU.</p>
+    <p>• Bloqueios, desvios, rotas alternativas, coordenação com outros órgãos.</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
   <div id="crimes" class="content">
-    <h2>Crimes de Trânsito (CTB – Arts. 302 a 306)</h2>
-    <p>• Art. 302 – Homicídio culposo na direção de veículo.</p>
-    <p>• Art. 303 – Lesão corporal culposa na direção.</p>
-    <p>• Art. 304 – Omissão de socorro.</p>
-    <p>• Art. 305 – Fuga do local do acidente.</p>
-    <p>• Art. 306 – Conduzir veículo sob influência de álcool.</p>
-    <div class="back" onclick="backMenu()">Voltar</div>
-  </div>
-
-  <div id="transporte_escolar" class="content">
-    <h2>Transporte Escolar</h2>
-    <p>• Curso especializado do condutor.</p>
-    <p>• Faixa amarela “ESCOLAR” e sinalização específica.</p>
-    <p>• Inspeções periódicas (conforme legislação local).</p>
-    <p>• Controle de quantidade máxima de crianças.</p>
-    <div class="back" onclick="backMenu()">Voltar</div>
-  </div>
-
-  <div id="cargas_perigosas" class="content">
-    <h2>Cargas Perigosas</h2>
-    <p>• Painéis laranja e rótulos de risco.</p>
-    <p>• Condutor com curso MOPP.</p>
-    <p>• Restrições em túneis e áreas sensíveis.</p>
-    <p>• Documentos da carga (fichas de emergência, etc.).</p>
-    <div class="back" onclick="backMenu()">Voltar</div>
-  </div>
-
-  <div id="app_taxi" class="content">
-    <h2>APP / Táxi – Fiscalização</h2>
-    <p>• Identificação do condutor no aplicativo ou credencial.</p>
-    <p>• Selo/adesivo conforme legislação municipal/estadual.</p>
-    <p>• Seguro, vistoria e condições gerais do veículo.</p>
-    <div class="back" onclick="backMenu()">Voltar</div>
-  </div>
-
-  <div id="mbft_tabelas" class="content">
-    <h2>Tabelas MBFT – Enquadramentos</h2>
-    <p><strong>Estacionamento:</strong> Art. 181, incisos I a XXI.</p>
-    <p><strong>Documentos:</strong> Arts. 232, 233.</p>
-    <p><strong>Licenciamento:</strong> Art. 230 V.</p>
-    <p><strong>Conduta:</strong> Arts. 167 a 175.</p>
-    <p><small>Use tabela impressa ou sistema oficial para códigos completos.</small></p>
-    <div class="back" onclick="backMenu()">Voltar</div>
-  </div>
-
-  <div id="relatos" class="content">
-    <h2>Modelos Avançados – Relatos</h2>
-    <p>• Agressão ao agente.</p>
-    <p>• Desacato / resistência.</p>
-    <p>• Perturbação recorrente.</p>
-    <p>• Ocorrências noturnas em locais sensíveis.</p>
-    <p><small>Você pode colar aqui modelos textuais que preferir padronizar.</small></p>
-    <div class="back" onclick="backMenu()">Voltar</div>
-  </div>
-
-  <div id="atalhos" class="content">
-    <h2>Atalhos Rápidos</h2>
-    <p>• Art. 165 – Embriaguez ao volante.</p>
-    <p>• Art. 181 XVII – Vaga idoso.</p>
-    <p>• Art. 181 XVIII – Vaga PCD.</p>
-    <p>• Art. 244 – Infrações típicas de motocicleta.</p>
-    <p>• Art. 230 – Veículo em mau estado.</p>
+    <h2>Crimes de Trânsito</h2>
+    <p>• Arts. 302 a 306 do CTB (homicídio culposo, lesão, omissão de socorro, fuga, embriaguez criminal).</p>
     <div class="back" onclick="backMenu()">Voltar</div>
   </div>
 
@@ -497,7 +291,7 @@ MEDIDAS ADOTADAS:
       });
     }
 
-    // PWA – registra Service Worker
+    // Registrar Service Worker para PWA
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
         navigator.serviceWorker.register('sw.js').catch(function (err) {
